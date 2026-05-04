@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "signal",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-04-30",
+
+  "ai": {
+    "binding": "AI"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "signal-db",
+      "database_id": "2d3d7fc1-ef26-44ce-914e-55ef7e4972ed"
+    }
+  ],
+
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "57876fdee916406eae130cf63b8e467a"
+    }
+  ],
+
+  "workflows": [
+    {
+      "name": "feedback-pipeline",
+      "binding": "PIPELINE",
+      "class_name": "FeedbackPipeline"
+    }
+  ]
+}
